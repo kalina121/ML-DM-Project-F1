@@ -3,21 +3,21 @@
   {
    "cell_type": "code",
    "execution_count": 1,
-   "id": "4ec98b3a",
+   "id": "480e7107",
    "metadata": {
     "_cell_guid": "b1076dfc-b9ad-4769-8c92-a6c4dae69d19",
     "_uuid": "8f2839f25d086af736a60e9eeb907d3b93b6e0e5",
     "execution": {
-     "iopub.execute_input": "2026-07-29T12:45:03.722309Z",
-     "iopub.status.busy": "2026-07-29T12:45:03.722028Z",
-     "iopub.status.idle": "2026-07-29T12:45:06.445207Z",
-     "shell.execute_reply": "2026-07-29T12:45:06.444595Z"
+     "iopub.execute_input": "2026-07-29T13:23:26.551695Z",
+     "iopub.status.busy": "2026-07-29T13:23:26.551163Z",
+     "iopub.status.idle": "2026-07-29T13:23:30.172580Z",
+     "shell.execute_reply": "2026-07-29T13:23:30.171536Z"
     },
     "papermill": {
-     "duration": 2.727072,
-     "end_time": "2026-07-29T12:45:06.446472+00:00",
+     "duration": 3.628612,
+     "end_time": "2026-07-29T13:23:30.174087+00:00",
      "exception": false,
-     "start_time": "2026-07-29T12:45:03.719400+00:00",
+     "start_time": "2026-07-29T13:23:26.545475+00:00",
      "status": "completed"
     },
     "tags": []
@@ -730,19 +730,19 @@
   {
    "cell_type": "code",
    "execution_count": 2,
-   "id": "0737cb7c",
+   "id": "cfce40d0",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-07-29T12:45:06.450236Z",
-     "iopub.status.busy": "2026-07-29T12:45:06.450006Z",
-     "iopub.status.idle": "2026-07-29T12:45:06.477401Z",
-     "shell.execute_reply": "2026-07-29T12:45:06.476818Z"
+     "iopub.execute_input": "2026-07-29T13:23:30.179779Z",
+     "iopub.status.busy": "2026-07-29T13:23:30.179463Z",
+     "iopub.status.idle": "2026-07-29T13:23:30.210066Z",
+     "shell.execute_reply": "2026-07-29T13:23:30.209321Z"
     },
     "papermill": {
-     "duration": 0.030712,
-     "end_time": "2026-07-29T12:45:06.478640+00:00",
+     "duration": 0.035017,
+     "end_time": "2026-07-29T13:23:30.211348+00:00",
      "exception": false,
-     "start_time": "2026-07-29T12:45:06.447928+00:00",
+     "start_time": "2026-07-29T13:23:30.176331+00:00",
      "status": "completed"
     },
     "tags": []
@@ -1460,6 +1460,275 @@
     "\n",
     "results_clean.head(25)\n"
    ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "a219c269",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2026-07-29T13:23:30.217818Z",
+     "iopub.status.busy": "2026-07-29T13:23:30.217570Z",
+     "iopub.status.idle": "2026-07-29T13:23:30.268173Z",
+     "shell.execute_reply": "2026-07-29T13:23:30.267419Z"
+    },
+    "papermill": {
+     "duration": 0.055431,
+     "end_time": "2026-07-29T13:23:30.269400+00:00",
+     "exception": false,
+     "start_time": "2026-07-29T13:23:30.213969+00:00",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "First 5 rows (selected columns):\n",
+      "   position  top10  year  circuitId  grid  forename     surname  \\\n",
+      "0         1      1  2008          1     1     Lewis    Hamilton   \n",
+      "1         2      1  2008          1     5      Nick    Heidfeld   \n",
+      "2         3      1  2008          1     7      Nico     Rosberg   \n",
+      "3         4      1  2008          1    11  Fernando      Alonso   \n",
+      "4         5      1  2008          1     3    Heikki  Kovalainen   \n",
+      "\n",
+      "  constructor_name  \n",
+      "0          McLaren  \n",
+      "1       BMW Sauber  \n",
+      "2         Williams  \n",
+      "3          Renault  \n",
+      "4          McLaren  \n",
+      "<class 'pandas.core.frame.DataFrame'>\n",
+      "RangeIndex: 13154 entries, 0 to 13153\n",
+      "Data columns (total 24 columns):\n",
+      " #   Column            Non-Null Count  Dtype  \n",
+      "---  ------            --------------  -----  \n",
+      " 0   resultId          13154 non-null  int64  \n",
+      " 1   raceId            13154 non-null  int64  \n",
+      " 2   driverId          13154 non-null  int64  \n",
+      " 3   constructorId     13154 non-null  int64  \n",
+      " 4   number            13154 non-null  float64\n",
+      " 5   grid              13154 non-null  int64  \n",
+      " 6   position          13154 non-null  int64  \n",
+      " 7   positionText      13154 non-null  object \n",
+      " 8   positionOrder     13154 non-null  int64  \n",
+      " 9   points            13154 non-null  float64\n",
+      " 10  laps              13154 non-null  int64  \n",
+      " 11  time              6001 non-null   object \n",
+      " 12  milliseconds      6000 non-null   float64\n",
+      " 13  fastestLap        4407 non-null   float64\n",
+      " 14  rank              4428 non-null   float64\n",
+      " 15  fastestLapTime    4407 non-null   object \n",
+      " 16  fastestLapSpeed   4407 non-null   object \n",
+      " 17  statusId          13154 non-null  int64  \n",
+      " 18  top10             13154 non-null  int64  \n",
+      " 19  year              13154 non-null  int64  \n",
+      " 20  circuitId         13154 non-null  int64  \n",
+      " 21  forename          13154 non-null  object \n",
+      " 22  surname           13154 non-null  object \n",
+      " 23  constructor_name  13154 non-null  object \n",
+      "dtypes: float64(5), int64(12), object(7)\n",
+      "memory usage: 2.4+ MB\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "resultId               0\n",
+       "raceId                 0\n",
+       "driverId               0\n",
+       "constructorId          0\n",
+       "number                 0\n",
+       "grid                   0\n",
+       "position               0\n",
+       "positionText           0\n",
+       "positionOrder          0\n",
+       "points                 0\n",
+       "laps                   0\n",
+       "time                7153\n",
+       "milliseconds        7154\n",
+       "fastestLap          8747\n",
+       "rank                8726\n",
+       "fastestLapTime      8747\n",
+       "fastestLapSpeed     8747\n",
+       "statusId               0\n",
+       "top10                  0\n",
+       "year                   0\n",
+       "circuitId              0\n",
+       "forename               0\n",
+       "surname                0\n",
+       "constructor_name       0\n",
+       "dtype: int64"
+      ]
+     },
+     "execution_count": 3,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "\n",
+    "# STEP 3: Merge with race, driver, constructor info\n",
+    "\n",
+    "\n",
+    "races_subset = races[['raceId', 'year', 'circuitId']]\n",
+    "data = results_clean.merge(races_subset, on='raceId', how='left')\n",
+    "\n",
+    "\n",
+    "data = data.merge(drivers[['driverId', 'forename', 'surname']], on='driverId', how='left')\n",
+    "\n",
+    "\n",
+    "data = data.merge(constructors[['constructorId', 'name']], on='constructorId', how='left')\n",
+    "data.rename(columns={'name': 'constructor_name'}, inplace=True)\n",
+    "\n",
+    "\n",
+    "data['grid'] = data['grid'].fillna(20).astype(int)\n",
+    "\n",
+    "print(\"\\nFirst 5 rows (selected columns):\")\n",
+    "print(data[['position', 'top10', 'year', 'circuitId', 'grid', 'forename', 'surname', 'constructor_name']].head())\n",
+    "\n",
+    "data.info()\n",
+    "data.isnull().sum()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "02c9c87b",
+   "metadata": {
+    "papermill": {
+     "duration": 0.002687,
+     "end_time": "2026-07-29T13:23:30.274611+00:00",
+     "exception": false,
+     "start_time": "2026-07-29T13:23:30.271924+00:00",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "50952377",
+   "metadata": {
+    "papermill": {
+     "duration": 0.00235,
+     "end_time": "2026-07-29T13:23:30.279970+00:00",
+     "exception": false,
+     "start_time": "2026-07-29T13:23:30.277620+00:00",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "636f7b4c",
+   "metadata": {
+    "papermill": {
+     "duration": 0.00237,
+     "end_time": "2026-07-29T13:23:30.284690+00:00",
+     "exception": false,
+     "start_time": "2026-07-29T13:23:30.282320+00:00",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "d2c0eba5",
+   "metadata": {
+    "papermill": {
+     "duration": 0.002585,
+     "end_time": "2026-07-29T13:23:30.290593+00:00",
+     "exception": false,
+     "start_time": "2026-07-29T13:23:30.288008+00:00",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "947fc21b",
+   "metadata": {
+    "papermill": {
+     "duration": 0.002367,
+     "end_time": "2026-07-29T13:23:30.295461+00:00",
+     "exception": false,
+     "start_time": "2026-07-29T13:23:30.293094+00:00",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "8a31e610",
+   "metadata": {
+    "papermill": {
+     "duration": 0.002368,
+     "end_time": "2026-07-29T13:23:30.300183+00:00",
+     "exception": false,
+     "start_time": "2026-07-29T13:23:30.297815+00:00",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "1f78b0ed",
+   "metadata": {
+    "papermill": {
+     "duration": 0.00224,
+     "end_time": "2026-07-29T13:23:30.304753+00:00",
+     "exception": false,
+     "start_time": "2026-07-29T13:23:30.302513+00:00",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "1e2592f6",
+   "metadata": {
+    "papermill": {
+     "duration": 0.002282,
+     "end_time": "2026-07-29T13:23:30.309411+00:00",
+     "exception": false,
+     "start_time": "2026-07-29T13:23:30.307129+00:00",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": []
   }
  ],
  "metadata": {
@@ -1491,14 +1760,14 @@
   },
   "papermill": {
    "default_parameters": {},
-   "duration": 5.695721,
-   "end_time": "2026-07-29T12:45:06.997240+00:00",
+   "duration": 7.492276,
+   "end_time": "2026-07-29T13:23:30.930320+00:00",
    "environment_variables": {},
    "exception": null,
    "input_path": "__notebook__.ipynb",
    "output_path": "__notebook__.ipynb",
    "parameters": {},
-   "start_time": "2026-07-29T12:45:01.301519+00:00",
+   "start_time": "2026-07-29T13:23:23.438044+00:00",
    "version": "2.7.0"
   }
  },
